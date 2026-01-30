@@ -1,0 +1,8 @@
+{
+  "name": "GCM de Capão Bonito - Gestão Operacional",
+  "description": "Sistema oficial de gestão da Guarda Civil Municipal de Capão Bonito, integrando atendimento 153, despacho e inteligência.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
