@@ -103,21 +103,7 @@ const App: React.FC = () => {
   const [systemLogo, setSystemLogo] = useState<string | null>(null);
 
   // Estado compartilhado de Escalas
-  const [schedules, setSchedules] = useState<DailySchedule[]>([
-    {
-      date: new Date().toISOString().split('T')[0],
-      teams: [
-        {
-          teamId: 'ALFA',
-          shift: '06h - 18h',
-          members: [
-            { id: '1', nomeGuerra: 'SANTOS', cargo: 'Inspetor', status: 'disponivel' },
-            { id: '2', nomeGuerra: 'SILVA', cargo: 'Guarda 1ª Classe', status: 'disponivel' }
-          ]
-        }
-      ]
-    }
-  ]);
+  const [schedules, setSchedules] = useState<DailySchedule[]>([]);
 
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({
     'Recursos Humanos': true,
@@ -125,58 +111,7 @@ const App: React.FC = () => {
     'Gestão': true
   });
 
-  const [relatorios, setRelatorios] = useState<RelatorioRonda[]>([
-    {
-      id: 'test-rel-1',
-      numeroVtr: 'ROMU-01',
-      data: '2024-10-30',
-      horario: '06H - 18H',
-      vistoData: '',
-      horaInicial: '06:00',
-      horaFinal: '18:00',
-      kmInicial: 45280,
-      kmFinal: 45350,
-      setor: 'CENTRO / VILA NOVA',
-      encarregado: 'SANTOS',
-      matriculaEncarregado: 'GCM-001',
-      motorista: 'SILVA',
-      matriculaMotorista: 'GCM-002',
-      auxiliar: 'OLIVEIRA',
-      matriculaAuxiliar: 'GCM-088',
-      rondas: [],
-      atividades: [
-        { id: 'at1', local: 'Praça João XXIII', talao: '', codigo: 'Patrulhamento', qtrIn: '09:00', kmIn: '45295', qtrOut: '09:45', kmOut: '45295', observacao: 'Patrulhamento preventivo' }
-      ],
-      abordagens: [
-        {
-          id: 'ab-1',
-          data: '2024-10-30',
-          tipo: 'Suspeito',
-          nome: 'JOÃO DA SILVA EXEMPLO',
-          alcunha: 'DINHO',
-          nascimento: '1995-05-20',
-          mae: 'MARIA DA SILVA EXEMPLO',
-          matricula: '',
-          cpf: '123.456.789-00',
-          rg: '12.345.678-9',
-          endereco: 'RUA DAS FLORES, 123, CENTRO',
-          local: 'PRAÇA DA MATRIZ',
-          hora: '10:30',
-          observacao: 'INDIVÍDUO EM ATITUDE SUSPEITA. NADA DE ILÍCITO ENCONTRADO.',
-          foto: ''
-        }
-      ],
-      veiculos: [],
-      abastecimento: { nReq: '44521', litros: '45' },
-      ocorrenciasAtendidas: 'A-01, L-05, C-04',
-      proximoEncarregado: 'FERRAZ',
-      situacaoVtr: {},
-      historico: 'GUARNIÇÃO EM PATRULHAMENTO PREVENTIVO PELOS PRÓPRIOS MUNICIPAIS.',
-      status: 'finalizado',
-      assinadoEncarregado: true,
-      dataAssinatura: '30/10/2024 18:15'
-    }
-  ]);
+  const [relatorios, setRelatorios] = useState<RelatorioRonda[]>([]);
 
   const [audiencias, setAudiencias] = useState<Audiencia[]>([]);
 
